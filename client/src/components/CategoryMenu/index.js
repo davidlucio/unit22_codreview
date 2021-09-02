@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+/** Dispatch is needed to update the state **/
+/** Selector is used to get information out of the state **/
 import { useDispatch, useSelector } from 'react-redux';
 import {
   UPDATE_CATEGORIES,

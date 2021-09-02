@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+/** Instantiate Redux in order to create a Provider wrapper */
 import { Provider } from 'react-redux';
 import store from './utils/store';
 
@@ -44,6 +45,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+            {/** Provider wrapper lets the entire app access redux **/}
           <Provider store={store}>
             <Nav />
             <Switch>
